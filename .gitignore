@@ -54,6 +54,3 @@ wwwroot/dist
 bin
 obj
 node_modules
-
-#Production related
-publish-to-production.ps1
