@@ -167,5 +167,5 @@ export default {
 </script>
 
 <style>
-@import url(https://fonts.googleapis.com/css?family=Orbitron:700,900,500,400);
+
 </style>
