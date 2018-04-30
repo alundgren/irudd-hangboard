@@ -45,3 +45,15 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#Dev environment things
+.vscode
+wwwroot/dist
+
+#Project temp files
+bin
+obj
+node_modules
+
+#Production related
+publish-to-production.ps1
