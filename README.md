@@ -5,6 +5,15 @@ Based on this excellent [vue + dotnetcore template](https://github.com/MarkPiesz
 
 The architecture is super overkill for this app but this is as much exploring new technology as making something useful for me.
 
-* Debug: `npm build dev`
+* Debug using npm: `npm build dev`
+* Debug using dotnet: `dotnet run` (NOTE: Only works if dotnet environment is set to Development)
+* If dist breaks delete the dist folder and then run `npm install`
+
+Tech used:
+
+* vuejs
+* dotnetcore
+* vuex
+* docker
 
 The published app lives [here] (https://hangboard.irudd.se/)
