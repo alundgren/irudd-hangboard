@@ -18,7 +18,7 @@ module.exports = (env) => {
                 { test: /\.scss(\?|$)/, use: extractCSS.extract(['css-loader', 'sass-loader']) } ]
         },
         entry: {
-            vendor: ['bootstrap', 'bootstrap/dist/css/bootstrap.css', 'event-source-polyfill', 'vue', 'vuex', 'axios', 'vue-router', 'jquery', 'font-awesome/scss/font-awesome.scss'],
+            vendor: ['event-source-polyfill', 'vue', 'vuex', 'axios', 'vue-router', 'jquery', 'font-awesome/scss/font-awesome.scss'],
         },
         output: {
             path: path.join(__dirname, 'wwwroot', 'dist'),
