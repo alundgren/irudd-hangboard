@@ -1,4 +1,4 @@
-#Irudd Hangboard
+# Irudd Hangboard
 Interval timer app for hangboarding. (Finger training for rock climbing)
 
 Based on this excellent [vue + dotnetcore template](https://github.com/MarkPieszak/aspnetcore-Vue-starter).
@@ -17,4 +17,4 @@ Tech used:
 * docker
 * webpack
 
-The published app lives [here] (https://hangboard.irudd.se/)
+The published app lives [here](https://hangboard.irudd.se/)
