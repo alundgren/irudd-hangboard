@@ -83,22 +83,9 @@ export default {
         toggleSound() {            
             this.$store.commit('toggleSound')
         },
-        onSwitchInterval(fromInterval, toInterval) {
-            if(fromInterval) {
-                document.getElementById(fromInterval).classList.remove('active');
-            }
-            if(toInterval) {
-                playSound('bell')
-                document.getElementById(toInterval).classList.add('active');
-                if(toInterval === 'rest') {
-                    current.workCount = current.workCount + 1;
-                    updateWorkCountUi(current.workCount);
-                }
-            }
-        },      
         playSound(name) {
             if(!this.isSoundOn) return;
-            const audio = document.getElementById('bellAudio');
+            const audio = document.getElementById(name + 'Audio');
             if (!audio) return;
             
             audio.currentTime = 0;
@@ -119,9 +106,9 @@ export default {
         
                 if(startMs == null) {
                     startMs = ms
+                    this.playSound('bell'); //NOTE: The first interval must play a sound or ios will supress audio for all the other ones
                     if(!isFirstInterval) {
-                        this.currentIntervalIndex = (this.currentIntervalIndex + 1) % 3;
-                        this.playSound();
+                        this.currentIntervalIndex = (this.currentIntervalIndex + 1) % 3;                        
                     }
                 }
                 let currentInterval = this.intervals[this.currentIntervalIndex]
