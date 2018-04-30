@@ -167,6 +167,5 @@ export default {
 </script>
 
 <style>
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Orbitron:700,900,500,400);
 </style>
