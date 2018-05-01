@@ -24,7 +24,7 @@
                 <span id="closeOverlay" class="fa fa-close" v-on:click="closeEditInterval()"></span>
             </div>
             <div><span id="overlayDisplayValue">{{currentEditInterval.totalSeconds}}</span></div>
-            <div><input id="overlayEditValue" v-model="currentEditInterval.totalSeconds" min="1" step="1" max="300" value="" type="range" style="width:100%" ></div>
+            <div><input id="overlayEditValue" v-model="currentEditInterval.totalSeconds" min="2" step="2" max="300" value="" type="range" style="width:100%" ></div>
         </div>
         <audio id='bellAudio' src="../media/boxing-bell.mp3"></audio>
     </div>
