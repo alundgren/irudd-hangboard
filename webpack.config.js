@@ -11,7 +11,7 @@ module.exports = (env) => {
         resolve: {
             extensions: ['.js', '.vue'],
             alias: {
-                'vue$': 'vue/dist/vue',
+                'vue$': isDevBuild ? 'vue/dist/vue.js' : 'vue/dist/vue.min.js',
                 'components': path.resolve(__dirname, './ClientApp/components'),
                 'views': path.resolve(__dirname, './ClientApp/views'),
                 'utils': path.resolve(__dirname, './ClientApp/utils'),
@@ -36,10 +36,7 @@ module.exports = (env) => {
             new webpack.DllReferencePlugin({
                 context: __dirname,
                 manifest: require('./wwwroot/dist/vendor-manifest.json')
-            }),
-            new webpack.LoaderOptionsPlugin({
-                debug: true
-              })
+            })
         ].concat(isDevBuild ? [
             // Plugins that apply in development builds only
             new webpack.SourceMapDevToolPlugin({

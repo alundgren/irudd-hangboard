@@ -18,7 +18,7 @@
   <Target Name="RunWebpack" AfterTargets="ComputeFilesToPublish">
     <!-- node-sass installed separately because the docker build breaks otherwise for no obvious reason -->
     <Exec Command="npm install node-sass" />
-	
+
     <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
     <Exec Command="npm install" />
     <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js --env.prod" />
