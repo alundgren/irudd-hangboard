@@ -34,8 +34,18 @@
 </head>
 
 <body>
-    @RenderBody()
-
+    @RenderBody()    
+    <environment names="Staging,Production">
+        <script>
+        // Check that service workers are registered
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('@Url.Content("~/static/js/serviceworker.js")', {scope: '/'});
+            });
+        }
+        </script>
+    </environment>
     <script src="~/dist/vendor.js" asp-append-version="true"></script>
     @RenderSection("scripts", required: false)
 </body>

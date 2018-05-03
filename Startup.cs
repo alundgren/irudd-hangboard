@@ -51,6 +51,12 @@ namespace IruddHangboard
                 app.UseExceptionHandler("/Home/Error");
             }
 
+            app.Use((context, next) =>
+            {
+                context.Response.Headers["Service-Worker-Allowed"] = "/";
+                return next.Invoke();
+            });
+
             app.UseStaticFiles();
 
             app.UseMvc(routes =>
