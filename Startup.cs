@@ -53,6 +53,7 @@ namespace IruddHangboard
 
             app.Use((context, next) =>
             {
+                //Since we dont serve our service worker from root. See https://developers.google.com/web/tools/workbox/guides/troubleshoot-and-debug
                 context.Response.Headers["Service-Worker-Allowed"] = "/";
                 return next.Invoke();
             });
